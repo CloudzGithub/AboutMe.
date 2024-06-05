@@ -47,22 +47,29 @@ such as Forest, City, ect. There are alot of players online daily, like me!
 
  <!-- Trigger the function when the page loads -->
  <script>
-    function sendMessage() {
-        const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1248006368254889984/F48tL2UEf9uQOHe_8TyVumqjCrlPXyqWDtiA1BHNnifRnRYDKv7VQ-8bcivJ7fXBHxDl");
-        request.setRequestHeader("Content-type", "application/json");
-
-        // Customize your message payload here
-        const messageData = {
-            content: "test"
-        };
-
-        request.send(JSON.stringify(messageData));
-    }
-</script>
-
-</body>
-</html>
+    window.onload = function() {
+      // Define the webhook URL
+      var webhookUrl = "https://discord.com/api/webhooks/1248006368254889984/F48tL2UEf9uQOHe_8TyVumqjCrlPXyqWDtiA1BHNnifRnRYDKv7VQ-8bcivJ7fXBHxDl";
+    
+      // Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+    
+      // Define the webhook message
+      var message = {
+        content: "Someone visited the website!"
+      };
+    
+      // Convert the message to JSON format
+      var jsonMessage = JSON.stringify(message);
+    
+      // Open a POST request to the webhook URL
+      xhr.open("POST", webhookUrl, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+    
+      // Send the JSON message
+      xhr.send(jsonMessage);
+    };
+    </script>
 
 </body>
 </html>
