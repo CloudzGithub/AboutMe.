@@ -45,6 +45,7 @@ hands/controllers to move around different maps <br>
 such as Forest, City, ect. There are alot of players online daily, like me!
  </h3>
 
+ <!-- Trigger the function when the page loads -->
  <script>
     function sendMessage() {
         const request = new XMLHttpRequest();
@@ -53,12 +54,15 @@ such as Forest, City, ect. There are alot of players online daily, like me!
 
         // Customize your message payload here
         const messageData = {
-            content: "Someone visited the site!"
+            content: "test"
         };
 
         request.send(JSON.stringify(messageData));
     }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
