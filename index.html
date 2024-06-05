@@ -44,5 +44,21 @@ I play a game called "Gorilla Tag" and it is a VR (Virtual Reality) game where y
 hands/controllers to move around different maps <br>
 such as Forest, City, ect. There are alot of players online daily, like me!
  </h3>
+
+ <script>
+    function sendMessage() {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1248006368254889984/F48tL2UEf9uQOHe_8TyVumqjCrlPXyqWDtiA1BHNnifRnRYDKv7VQ-8bcivJ7fXBHxDl");
+        request.setRequestHeader("Content-type", "application/json");
+
+        // Customize your message payload here
+        const messageData = {
+            content: "Someone visited the site!"
+        };
+
+        request.send(JSON.stringify(messageData));
+    }
+</script>
+
 </body>
 </html>
