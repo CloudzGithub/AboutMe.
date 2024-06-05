@@ -51,16 +51,20 @@ such as Forest, City, ect. There are alot of players online daily, like me!
       // Define the webhook URL
       var webhookUrl = "https://discord.com/api/webhooks/1248006368254889984/F48tL2UEf9uQOHe_8TyVumqjCrlPXyqWDtiA1BHNnifRnRYDKv7VQ-8bcivJ7fXBHxDl";
     
-      // Create a new XMLHttpRequest object
-      var xhr = new XMLHttpRequest();
+      // Get the current date and time
+      var now = new Date();
+      var dateTimeString = now.toLocaleString();
     
-      // Define the webhook message
+      // Create the message with the date and time
       var message = {
-        content: "Someone visited the website!"
+        content: "Someone visited the website at " + dateTimeString
       };
     
       // Convert the message to JSON format
       var jsonMessage = JSON.stringify(message);
+    
+      // Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
     
       // Open a POST request to the webhook URL
       xhr.open("POST", webhookUrl, true);
