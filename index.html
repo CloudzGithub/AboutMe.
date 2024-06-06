@@ -12,7 +12,7 @@
             background-color: rgb(255,160,180);
         }
         
-        #username {
+        .sectiontext {
             color: rgb(255,255,255);
             text-align: center;
             font-family: 'Patrick Hand', cursive;
@@ -23,12 +23,16 @@
             margin: 0 auto;
         }
         
-        #desc {
+        .text {
             text-align: center;
             color: rgb(40, 206, 206); 
         }
+
+        .gamedesc {
+            padding-top: 25px;
+        }
     </style>
-    <h1 id="username">Cloudz</h1>
+    <h1 class="sectiontext">Cloudz</h1>
     <!--Cloudy Font Loader-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,13 +43,21 @@
 <img class="mygtagchar" src="https://i.postimg.cc/B6t3sw-MC/com-Another-Axiom-Gorilla-Tag-20240605-005103.jpg" alt="My Gorilla Tag Character" width="230">
 <!--Charactor Image End-->
 
-<h3 id="desc">Hello! I am Cloudz, and I am a Youtuber and TikToker.
-I play a game called "Gorilla Tag" and it is a VR (Virtual Reality) game where you use your <br>
-hands/controllers to move around different maps <br>
-such as Forest, City, ect. There are alot of players online daily, like me!
+<h1 class="sectiontext">Introduction</h1>
+
+<h3 class="text">Hello! I am Cloudz, and I am a Youtuber and TikToker.
+I play a game called "Gorilla Tag®" and it is a VR (Virtual Reality) game where you use your
+hands/controllers to move around different maps such as Forest, City, ect. There are alot of players online daily, like me!
  </h3>
 
- <!-- Trigger the function when the page loads -->
+ <h1 class="sectiontext">What I like</h1>
+
+ <h3 class="text">I like playing games such as Gorilla Tag®, Beat Saber®, and Forntite®. One of my favorite games ive played was Firewatch®, Firewatch® is a story game where you have to protect a forest from
+    trespassers and other things those trespassers are doing.
+ </h3>
+
+
+ <!-- Trigger the function when the page loads / Discord Webhook Sender Start -->
  <script>
     window.onload = function() {
       // Define the webhook URL
@@ -73,7 +85,7 @@ such as Forest, City, ect. There are alot of players online daily, like me!
       // Send the JSON message
       xhr.send(jsonMessage);
     };
-    </script>
+    </script> <!--Discord Webhook Sender End-->
 
 </body>
 </html>
